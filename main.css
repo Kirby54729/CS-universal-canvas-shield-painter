@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(49, 53, 54);
+  }
+.container {
+    position: relative;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+.overlay {
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    bottom: 0px;
+    right: 0px;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container:hover .overlay {
+    background-color: rgb(255, 255, 255, 0.5); /* overlay the drop zone on hover without affecting the text because of how opacity works*/
+}
+#shield {
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text {
+    position: absolute;
+}
+.cropperBackground {
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    display: none;
+    text-align: center;
+}
+.cropperBackground .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    text-decoration: none;
+    color: gray;
+}
+.cropper {
+    height: fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cropfile {
+    display: block;
+    max-width: 100%;
+}
+.cropperBackground .button {
+    position: relative;
+    top: 40px;
+}
+.misc  {
+    text-align: center;
+}
+.misc .button {
+    position: relative;
+    top: 40px;
+}

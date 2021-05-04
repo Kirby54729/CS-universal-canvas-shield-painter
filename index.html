@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.js"></script>
+    <script src="script.js"></script>
+    <title>Canvas Shield Painter</title>
+</head>
+<body>
+<div class="container">
+    <canvas id="shield" width="640" height="640"></canvas>
+    <div class="overlay" ondrop="dropHandler(event);" ondragover="event.preventDefault();">
+        <div class="text">Drop your image here</div>
+    </div>
+
+</div>
+<div class="cropperBackground">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeCropper()">&times;</a>
+    <div class="cropper">
+        <img class="cropfile">
+    </div>
+    <button type="button" class="button" onclick="getResult();showResult();">Crop</button>
+</div>   
+<div class="misc">
+    <button type="button" class="button" onclick="download();">Download result</button>
+</div>
+</body>
+</html>
